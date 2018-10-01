@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.QualityTools.Testing.Fakes;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace TDDBank.Tests
@@ -19,6 +20,36 @@ namespace TDDBank.Tests
             var oh = new OpeningHours();
 
             Assert.AreEqual(result, oh.IsOpen(dt));
+        }
+
+
+        [TestMethod]
+        public void OpeningHourse_IsNowOpen()
+        {
+            
+            using (ShimsContext.Create())
+            {
+                var oh = new OpeningHours();
+
+                System.IO.Fakes.ShimStreamReader.AllInstances.ReadLine = sr => "wichtiger text";
+
+
+
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2018, 10, 1, 16, 0, 0);
+                Assert.IsTrue(oh.IsNowOpen());
+
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2018, 10, 1, 19, 0, 0);
+                Assert.IsFalse(oh.IsNowOpen());
+            }
+
+        }
+
+        [TestMethod]
+        public void IsWochenende()
+        {
+            var oh = new OpeningHours();
+
+            Assert.IsTrue(oh.IsWeekend(new DateTime(2018, 9, 30)));
         }
     }
 }

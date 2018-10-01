@@ -48,8 +48,6 @@ namespace TDDBank
             #endregion
         }
 
-
-
         public bool IsOpen(DateTime time)
         {
             return
@@ -58,7 +56,18 @@ namespace TDDBank
                    days[time.DayOfWeek].End > time.TimeOfDay;
         }
 
+        public bool IsWeekend(DateTime dateTime)
+        {
+            if (dateTime.Day > 15)
+                return false;
 
+            return dateTime.DayOfWeek == DayOfWeek.Sunday || dateTime.DayOfWeek == DayOfWeek.Saturday;
+        }
+
+        public bool IsNowOpen()
+        {
+            return IsOpen(DateTime.Now);
+        }
     }
 
     public struct Times
