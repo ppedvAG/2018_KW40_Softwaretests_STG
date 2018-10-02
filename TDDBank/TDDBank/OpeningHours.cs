@@ -58,8 +58,7 @@ namespace TDDBank
 
         public bool IsWeekend(DateTime dateTime)
         {
-            if (dateTime.Day > 15)
-                return false;
+
 
             return dateTime.DayOfWeek == DayOfWeek.Sunday || dateTime.DayOfWeek == DayOfWeek.Saturday;
         }
