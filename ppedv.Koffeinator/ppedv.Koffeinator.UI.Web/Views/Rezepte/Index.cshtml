@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ppedv.Koffeinator.Model.KaffeeRezept>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Bezeichnung)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kaffee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Milch)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Zucker)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kakao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Löffel)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bezeichnung)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kaffee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Milch)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zucker)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kakao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Löffel)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
