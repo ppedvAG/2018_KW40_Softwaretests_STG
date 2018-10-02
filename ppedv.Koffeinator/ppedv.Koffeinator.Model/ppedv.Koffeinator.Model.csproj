@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\IKaffeemaschine.cs" />
+    <Compile Include="Contracts\IRepository.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="KaffeeRezept.cs" />
     <Compile Include="Maschine.cs" />
