@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.Koffeinator.Data.Jura
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.Koffeinator.Data.Jura.Tests", "ppedv.Koffeinator.Data.Jura.Tests\ppedv.Koffeinator.Data.Jura.Tests.csproj", "{EA0AD9F4-9219-49BA-B71E-BA89B66EA5E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.Koffeinator.Data.EF", "ppedv.Koffeinator.Data.EF\ppedv.Koffeinator.Data.EF.csproj", "{B0FC6062-3E5D-42B9-837B-4E5F570A85AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.Koffeinator.Data.EF.Tests", "ppedv.Koffeinator.Data.EF.Tests\ppedv.Koffeinator.Data.EF.Tests.csproj", "{61E0994E-77FD-41AE-AEDE-E1CD6927D1CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{EA0AD9F4-9219-49BA-B71E-BA89B66EA5E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA0AD9F4-9219-49BA-B71E-BA89B66EA5E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA0AD9F4-9219-49BA-B71E-BA89B66EA5E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0FC6062-3E5D-42B9-837B-4E5F570A85AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0FC6062-3E5D-42B9-837B-4E5F570A85AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0FC6062-3E5D-42B9-837B-4E5F570A85AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0FC6062-3E5D-42B9-837B-4E5F570A85AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61E0994E-77FD-41AE-AEDE-E1CD6927D1CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61E0994E-77FD-41AE-AEDE-E1CD6927D1CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61E0994E-77FD-41AE-AEDE-E1CD6927D1CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61E0994E-77FD-41AE-AEDE-E1CD6927D1CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
