@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using AutoFixture;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ppedv.Koffeinator.Model;
@@ -78,7 +79,7 @@ namespace ppedv.Koffeinator.Data.EF.Tests
                 var loaded = con.Rezepte.Find(testRezept.Id);
                 loaded.Should().NotBeNull();
 
-                loaded.Bezeichnung = "Sehr leckerer Kaffe!";
+                loaded.Bezeichnung = "Sehr leckerer Kaffee!";
                 con.SaveChanges();
             }
 
@@ -86,7 +87,7 @@ namespace ppedv.Koffeinator.Data.EF.Tests
             using (var con = new EfContext())
             {
                 var loaded = con.Rezepte.Find(testRezept.Id);
-                loaded.Bezeichnung.Should().Be("Sehr leckerer Kaffe!");
+                loaded.Bezeichnung.Should().Be("Sehr leckerer Kaffee!");
 
                 con.Rezepte.Remove(loaded);
                 con.SaveChanges();
@@ -99,6 +100,29 @@ namespace ppedv.Koffeinator.Data.EF.Tests
                 loaded.Should().BeNull();
             }
         }
+
+
+        [TestMethod]
+        public void EfContext_Rezept_AutoFixture()
+        {
+            var fix = new Fixture();
+            fix.Behaviors.Add(new OmitOnRecursionBehavior());
+            var rez = fix.Create<KaffeeRezept>();
+
+            using (var con = new EfContext())
+            {
+                con.Rezepte.Add(rez);
+                con.SaveChanges();
+            }
+
+            using (var con = new EfContext())
+            {
+                var loaded = con.Rezepte.Find(rez.Id);
+                loaded.Should().BeEquivalentTo(rez,x=>x.IgnoringCyclicReferences());
+            }
+
+        }
+
 
     }
 }
