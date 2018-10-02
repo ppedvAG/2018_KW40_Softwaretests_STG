@@ -11,7 +11,20 @@ namespace ppedv.Koffeinator.Logik
     public class Core
     {
         public IKaffeemaschine AktiveMaschine { get; set; }
+        public IRepository Repository { get; private set; }
 
+        public Core(IRepository repo)
+        {
+            Repository = repo;
+        }
+
+        public Core() : this(null)
+        { }
+
+        public KaffeeRezept GetRezeptMitMeistemKaffee()
+        {
+            return Repository.Query<KaffeeRezept>().OrderByDescending(x => x.Kaffee).FirstOrDefault();
+        }
 
         public void MachAlleKaffees(IEnumerable<KaffeeRezept> rezepte)
         {
@@ -19,7 +32,7 @@ namespace ppedv.Koffeinator.Logik
                 throw new ArgumentNullException("rezepte");
             if (AktiveMaschine == null)
                 throw new InvalidOperationException();
-            
+
             foreach (var rezept in rezepte.Where(x => x.Kaffee > 2))
             {
                 AktiveMaschine.MachKaffee(rezept);

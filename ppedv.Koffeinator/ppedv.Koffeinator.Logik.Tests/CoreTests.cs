@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using ppedv.Koffeinator.Model;
@@ -59,6 +60,26 @@ namespace ppedv.Koffeinator.Logik.Tests
             mock.Verify(x => x.MachKaffee(It.IsAny<KaffeeRezept>()), Times.Exactly(2));
 
 
+        }
+
+
+        [TestMethod]
+        public void Core_GetRezeptMitMeistemKaffee()
+        {
+            var mock = new Mock<IRepository>();
+            mock.Setup(x => x.Query<KaffeeRezept>()).Returns(() =>
+            {
+                var kr1 = new KaffeeRezept() { Kaffee = 6, Bezeichnung = "A1" };
+                var kr2 = new KaffeeRezept() { Kaffee = 8, Bezeichnung = "A2" };
+                var kr3 = new KaffeeRezept() { Kaffee = 3, Bezeichnung = "A3" };
+                return new[] { kr1, kr2, kr3 }.AsQueryable();
+            });
+
+            var core = new Core(mock.Object);
+
+            var result = core.GetRezeptMitMeistemKaffee();
+
+            Assert.AreEqual("A2", result.Bezeichnung);
         }
     }
 }
