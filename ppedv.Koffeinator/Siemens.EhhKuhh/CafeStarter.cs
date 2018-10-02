@@ -14,13 +14,13 @@ namespace Siemens.EhhKuhh
 
         public void HeatUp()
         {
-            Thread.Sleep(2000);
+            Thread.Sleep(1000);
             hot = true;
         }
 
         public void CreateCafe()
         {
-            Console.Beep(800, 2000);
+            Console.Beep(300, 500);
             hot = false;
         }
     }

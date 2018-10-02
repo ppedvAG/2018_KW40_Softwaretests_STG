@@ -9,6 +9,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jura.Pressa2000", "Jura.Pre
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siemens.EhhKuhh", "Siemens.EhhKuhh\Siemens.EhhKuhh.csproj", "{CAF979AD-FD28-48A4-8576-FD01C39F44EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.Koffeinator.Data.Siemens", "ppedv.Koffeinator.Data.Siemens\ppedv.Koffeinator.Data.Siemens.csproj", "{92FDBD02-E657-4A65-B521-BD1CA42A091A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.Koffeinator.Data.Siemens.Tests", "ppedv.Koffeinator.Data.Siemens.Tests\ppedv.Koffeinator.Data.Siemens.Tests.csproj", "{189CE19A-B3C8-4731-B901-F41E741F217F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.Koffeinator.Data.Jura", "ppedv.Koffeinator.Data.Jura\ppedv.Koffeinator.Data.Jura.csproj", "{42DC41D9-A22C-42F5-9C89-74EBD6016107}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.Koffeinator.Data.Jura.Tests", "ppedv.Koffeinator.Data.Jura.Tests\ppedv.Koffeinator.Data.Jura.Tests.csproj", "{EA0AD9F4-9219-49BA-B71E-BA89B66EA5E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +35,22 @@ Global
 		{CAF979AD-FD28-48A4-8576-FD01C39F44EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAF979AD-FD28-48A4-8576-FD01C39F44EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAF979AD-FD28-48A4-8576-FD01C39F44EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92FDBD02-E657-4A65-B521-BD1CA42A091A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92FDBD02-E657-4A65-B521-BD1CA42A091A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92FDBD02-E657-4A65-B521-BD1CA42A091A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92FDBD02-E657-4A65-B521-BD1CA42A091A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{189CE19A-B3C8-4731-B901-F41E741F217F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{189CE19A-B3C8-4731-B901-F41E741F217F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{189CE19A-B3C8-4731-B901-F41E741F217F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{189CE19A-B3C8-4731-B901-F41E741F217F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42DC41D9-A22C-42F5-9C89-74EBD6016107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42DC41D9-A22C-42F5-9C89-74EBD6016107}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42DC41D9-A22C-42F5-9C89-74EBD6016107}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42DC41D9-A22C-42F5-9C89-74EBD6016107}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA0AD9F4-9219-49BA-B71E-BA89B66EA5E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA0AD9F4-9219-49BA-B71E-BA89B66EA5E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA0AD9F4-9219-49BA-B71E-BA89B66EA5E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA0AD9F4-9219-49BA-B71E-BA89B66EA5E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
