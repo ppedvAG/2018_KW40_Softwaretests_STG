@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{102B0883-FFC6-4EFD-9297-439826D9701E}</ProjectGuid>
+    <ProjectGuid>{B732839E-D6CF-4C4B-B58C-F6BDF9F6BDDA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ppedv.Koffeinator.Model</RootNamespace>
-    <AssemblyName>ppedv.Koffeinator.Model</AssemblyName>
+    <RootNamespace>ppedv.Koffeinator.Logik</RootNamespace>
+    <AssemblyName>ppedv.Koffeinator.Logik</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,11 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\IKaffeemaschine.cs" />
-    <Compile Include="Entity.cs" />
-    <Compile Include="KaffeeRezept.cs" />
-    <Compile Include="Maschine.cs" />
+    <Compile Include="Core.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ppedv.Koffeinator.Model\ppedv.Koffeinator.Model.csproj">
+      <Project>{102B0883-FFC6-4EFD-9297-439826D9701E}</Project>
+      <Name>ppedv.Koffeinator.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
 ﻿using ppedv.Koffeinator.Model;
+using ppedv.Koffeinator.Model.Contracts;
 using Siemens.EhhKuhh;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ppedv.Koffeinator.Data.Siemens
 {
-    public class SiemensConfig
+    public class SiemensConfig : IKaffeemaschine
     {
         public void MachKaffee(KaffeeRezept rezept)
         {
@@ -28,7 +29,7 @@ namespace ppedv.Koffeinator.Data.Siemens
                 cc.Löffel = DateTime.Now.AddDays(-1);
 
             cc.Zucker = new bool[rezept.Zucker];
-            for (int i = 0; i < rezept.Zucker-1; i++)
+            for (int i = 0; i < rezept.Zucker - 1; i++)
             {
                 cc.Zucker[i] = true;
             }

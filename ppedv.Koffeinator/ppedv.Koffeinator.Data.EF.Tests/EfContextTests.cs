@@ -118,7 +118,7 @@ namespace ppedv.Koffeinator.Data.EF.Tests
             using (var con = new EfContext())
             {
                 var loaded = con.Rezepte.Find(rez.Id);
-                loaded.Should().BeEquivalentTo(rez,x=>x.IgnoringCyclicReferences());
+                loaded.Should().BeEquivalentTo(rez, x => x.IgnoringCyclicReferences());
             }
 
         }
