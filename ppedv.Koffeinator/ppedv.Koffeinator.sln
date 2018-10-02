@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.Koffeinator.Model", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jura.Pressa2000", "Jura.Pressa2000\Jura.Pressa2000.csproj", "{10E485AE-44C2-4697-A91B-44D43309EDA3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siemens.EhhKuhh", "Siemens.EhhKuhh\Siemens.EhhKuhh.csproj", "{CAF979AD-FD28-48A4-8576-FD01C39F44EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{10E485AE-44C2-4697-A91B-44D43309EDA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10E485AE-44C2-4697-A91B-44D43309EDA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10E485AE-44C2-4697-A91B-44D43309EDA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAF979AD-FD28-48A4-8576-FD01C39F44EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAF979AD-FD28-48A4-8576-FD01C39F44EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAF979AD-FD28-48A4-8576-FD01C39F44EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAF979AD-FD28-48A4-8576-FD01C39F44EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
